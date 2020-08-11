@@ -34,7 +34,7 @@ You may have to search the internet for commands you haven't seen before. [W3 Sc
 1. Connect to the database with `psql your_database_url`
 1. Insert some example data with `\i init.sql`
 
-You can check everything is set up by listing the database tables with `\dt`. You should see four FAC-related tables: `cohorts`, `students`, `protects` and `students_projects`.
+You can check everything is set up by listing the database tables with `\dt`. You should see four FAC-related tables: `cohorts`, `students`, `projects` and `students_projects`.
 
 1.  ### Cohort locations
 
@@ -91,11 +91,11 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
 1.  ### Student locations
 
-    List the names of each student along with the location of their cohort.
+    List the username of each student along with the location of their cohort.
 
     <details>
     <summary>Hint</summary>
-    Remember you can use joins to connect to tables together and access information from both.
+    Remember you can use joins to connect two tables together and access information from both.
     </details>
 
     #### Expected result
@@ -126,13 +126,15 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
 1.  ### Students with projects
 
-    List all project names with the username's of the students who worked on them.
+    List all project names with the usernames of the students who worked on them.
 
     <details>
     <summary>Hint</summary>
+
     Since projects-to-students is a _many-to-many_ relationship (each project can have multiple authors, each student can have multiple projects) we can't link them with just IDs. We need a whole separate table to keep track of which students worked on which projects.
 
     This is often called a _join table_, or _junction table_. You'll need to join to this as an intermediary step to link projects to students.
+
     </details>
 
     #### Expected result
@@ -159,7 +161,7 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
 1.  ### Bonus: Students with projects by location
 
-    List all project names with the username's of the students who worked on them, only for students who attended FAC in Finsbury Park.
+    List all project names with the usernames of the students who worked on them, only for students who attended FAC in Finsbury Park.
 
     <details>
     <summary>Hint</summary>
