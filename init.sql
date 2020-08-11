@@ -51,10 +51,10 @@ INSERT INTO students (username, name, cohort_name) VALUES
   ('reubengt', 'Reuben', '17')
 ;
 
-INSERT INTO projects (name, topic, repo_url, url) VALUES
-  ('FACX Machine', 'HTML &  CSS', 'https://github.com/FAC10/week1-ajoy-facx-machine', 'https://fac10.github.io/week1-ajoy-facx-machine/'),
-  ('Hamster Hotel', 'Postgres', 'https://github.com/oliverjam/hamster-hotel', null),
-  ('Agony Yaunt', 'API', 'https://github.com/FAC-Sixteen/week-3-agony-yaunt', 'https://fac-sixteen.github.io/week-3-agony-yaunt/public/')
+INSERT INTO projects (id, name, topic, repo_url, url) VALUES
+  (1, 'FACX Machine', 'HTML &  CSS', 'https://github.com/FAC10/week1-ajoy-facx-machine', 'https://fac10.github.io/week1-ajoy-facx-machine/'),
+  (2, 'Hamster Hotel', 'Postgres', 'https://github.com/oliverjam/hamster-hotel', null),
+  (3, 'Agony Yaunt', 'API', 'https://github.com/FAC-Sixteen/week-3-agony-yaunt', 'https://fac-sixteen.github.io/week-3-agony-yaunt/public/')
 ;
 
 INSERT INTO students_projects VALUES
