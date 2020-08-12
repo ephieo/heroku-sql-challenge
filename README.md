@@ -119,7 +119,7 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
     ```sql
     SELECT students.username, cohorts.location FROM students
-      JOIN cohorts ON students.cohort_name = cohorts.name;
+      INNER JOIN cohorts ON students.cohort_name = cohorts.name;
     ```
 
     </details>
@@ -153,8 +153,8 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
     ```sql
     SELECT projects.name, students.username FROM projects
-      JOIN students_projects ON projects.id = students_projects.project_id
-      JOIN students ON students.username = students_projects.student_username;
+      INNER JOIN students_projects ON projects.id = students_projects.project_id
+      INNER JOIN students ON students.username = students_projects.student_username;
     ```
 
     </details>
@@ -181,8 +181,8 @@ You can check everything is set up by listing the database tables with `\dt`. Yo
 
     ```sql
     SELECT projects.name, students.username FROM projects
-      JOIN students_projects ON projects.id = students_projects.project_id
-      JOIN students ON students.username = students_projects.student_username
+      INNER JOIN students_projects ON projects.id = students_projects.project_id
+      INNER JOIN students ON students.username = students_projects.student_username
       WHERE students.username IN (
         SELECT username FROM students
           WHERE cohort_name IN (
